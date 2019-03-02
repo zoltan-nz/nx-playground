@@ -1,4 +1,4 @@
-import { getAddTodoButton, getGreeting, getTodos } from '../support/app.po';
+import { getAddTodoButton, getTodos } from '../support/app.po';
 
 describe('Todo App', () => {
   beforeEach(() => cy.visit('/'));
@@ -7,5 +7,5 @@ describe('Todo App', () => {
     getTodos().should(t => expect(t.length).equal(2));
     getAddTodoButton().click();
     getTodos().should(t => expect(t.length).equal(3));
-  })
+  });
 });
