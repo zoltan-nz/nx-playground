@@ -17,7 +17,8 @@ describe('AppComponent', () => {
   it(`should have as title 'todos'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('todos');
+    console.log(app);
+    expect(app.todos).toEqual([{"title": "Todo 1"}, {"title": "Todo 2"}]);
   });
 
   it('should render title in a h1 tag', () => {
@@ -25,7 +26,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain(
-      'Welcome to todos!'
+      'Todos'
     );
   });
 });
