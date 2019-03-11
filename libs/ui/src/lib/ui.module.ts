@@ -7,4 +7,6 @@ import { TodosComponent } from './todos/todos.component';
   declarations: [TodosComponent],
   exports: [TodosComponent]
 })
-export class UiModule {}
+export class UiModule {
+  TodosComponent;
+}
