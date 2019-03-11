@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-playground/data": ["libs/data/src/index.ts"]
+      "@nx-playground/data": ["libs/data/src/index.ts"],
+      "@nx-playground/ui": ["libs/ui/src/index.ts"]
     },
     "esModuleInterop": true
   },
