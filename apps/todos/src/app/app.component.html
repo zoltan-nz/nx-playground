@@ -1,5 +1,8 @@
-<h1>Todos</h1>
-
-<nx-playground-todos [todos]="todos"></nx-playground-todos>
-
-<button id="add-todo" (click)="addTodo()" data-test-add-button>Add Todo</button>
+<div style="text-align:center">
+  <h1>Welcome to todos!</h1>
+  <img
+    width="450"
+    src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
+  />
+</div>
+<div>Message: {{ hello$ | async | json }}</div>

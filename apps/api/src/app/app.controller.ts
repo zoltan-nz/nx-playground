@@ -1,4 +1,6 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+
+import { Message } from '@nx-playground/api-interfaces';
 
 import { AppService } from './app.service';
 
@@ -6,13 +8,8 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('todos')
-  getData() {
+  @Get('hello')
+  getData(): Message {
     return this.appService.getData();
-  }
-
-  @Post('todos')
-  addTodo() {
-    return this.appService.addTodo();
   }
 }

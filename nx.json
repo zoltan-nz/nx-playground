@@ -8,19 +8,16 @@
     "nx.json": "*"
   },
   "projects": {
-    "todos": {
+    "todos-e2e": {
       "tags": []
     },
-    "todos-e2e": {
+    "todos": {
       "tags": []
     },
     "api": {
       "tags": []
     },
-    "data": {
-      "tags": []
-    },
-    "ui": {
+    "api-interfaces": {
       "tags": []
     }
   }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Todo } from '@nx-playground/data';
+import { Message } from '@nx-playground/api-interfaces';
 
 @Component({
   selector: 'nx-playground-root',
@@ -8,17 +8,6 @@ import { Todo } from '@nx-playground/data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  todos: Todo[] = [{ title: 'Todo 1' }, { title: 'Todo 2' }];
-
-  constructor(private http: HttpClient) {
-    this.fetch();
-  }
-
-  fetch() {
-    this.http.get<Todo[]>('/api/todos').subscribe(t => (this.todos = t));
-  }
-
-  addTodo() {
-    this.http.post('/api/todos', {}).subscribe(() => this.fetch());
-  }
+  hello$ = this.http.get<Message>('/api/hello');
+  constructor(private http: HttpClient) {}
 }
